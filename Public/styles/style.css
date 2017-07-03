@@ -1,0 +1,27 @@
+/*Site Styles*/
+html {
+  background-color: #00181D;
+  color: #f3f3f3;
+}
+
+/*Nav Styles*/
+ul {
+    text-align: center;
+}
+
+ul li {
+  display: inline-block;
+  font-size: 25px;
+  margin: 10px 15px;
+}
+
+a:visited, a {
+  text-decoration: none;
+  color: #f3f3f3;
+}
+
+li img {
+  width: 25px;
+  height: 25px;
+  margin: 5px 5px;
+}

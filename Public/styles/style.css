@@ -1,7 +1,11 @@
 /*Site Styles*/
-body {
-  background-color: #00181D;
-  color: #f3f3f3;
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  background-color: #292929;
+  color: #f0f0f0;
 }
 
 /*Nav Styles*/
@@ -41,3 +45,12 @@ li img {
 .stats {
   padding-left: 113px;
 }
+
+/*
+white: #F0F0F0
+light-gray: #454545
+gray: #292929
+dark-gray: #191919
+red: #FF2929
+yellow: #E5C200
+*/

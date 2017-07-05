@@ -7,9 +7,6 @@ body {
   background-color: #292929;
 }
 
-main {
-  padding-left: 200px;
-}
 
 main h2 {
   color: #E5C200;
@@ -23,11 +20,11 @@ main h2 {
 header {
 font-family: 'Montserrat', sans-serif;
 background-color: #191919;
-height: 100px;
+height: 55px;
 }
 
 #home, #pokedex, #builder {
-  margin-top: ;
+  margin-top: 10px;
 }
 
 footer {
@@ -42,7 +39,7 @@ h2 {
   width: 750px;
   font-size: 48px;
   text-align: center;
-  color: #f3f3f3;
+  color: #F0F0F0;
   text-shadow: 2px 2px 4px #000;
   margin: auto;
   margin-top: 150px;
@@ -55,6 +52,7 @@ p {
 }
 
 button {
+  margin-top: 50px;
   font-size: 20px;
   color: #F0F0F0;
   background-color: #292929;
@@ -62,8 +60,8 @@ button {
   border-radius: none;
 }
 
-#enroll {
-  margin-left: 200px;
+.button-center {
+  vertical-align: middle;
 }
 
 /*
@@ -73,3 +71,4 @@ gray: #292929
 dark-gray: #191919
 red: #FF2929
 yellow: #E5C200
+*/

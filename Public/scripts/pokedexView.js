@@ -45,13 +45,10 @@ pokedexView.handleTypeFilter = function() {
   });
 }
 
-pokedexView.handleClickEvent = function() {
-  $('.list-name').click(function() {
-    console.log('clicked: ', this);
-    var selected = $(this[data-name].val());
-    console.log(selected);
+pokedexView.handleClick = function() {
+  $('#list').on('click', '.list-name', function(){
     $('.dex-entry').hide();
-    $(`.dex-entry[data-name="${selected}"]`).fadeIn();
+    $(`.dex-entry[data-id="${$(this).attr('data-id')}"]`).fadeIn();
   })
 }
 
@@ -59,13 +56,13 @@ pokedexView.initIndexPage = function() {
   Pokemon.all.forEach(function(pokemon) {
     $('#list ul').append(pokemon.listToHtml());
     $('#pokedex ul').append(pokemon.pokemonToHtml());
-// 
-//    $('.dex-entry').hide();
+    $('.dex-entry').hide();
   });
 }
 
 $(document).ready(function () {
+  console.log('document ready');
   pokedexView.handleGenFilter();
   pokedexView.handleTypeFilter();
-  pokedexView.handleClickEvent();
+  pokedexView.handleClick();
 })

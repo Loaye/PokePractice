@@ -25,3 +25,8 @@ li img {
   height: 25px;
   margin: 5px 5px;
 }
+
+.sprite {
+  width: 200px;
+  height: 200px;
+}

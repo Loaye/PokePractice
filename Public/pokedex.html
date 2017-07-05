@@ -12,19 +12,22 @@
 
     <!-- Handlebars Template -->
     <script id="list-template" type="text/x-handlebars-template">
-      <li class="list-name"  data-type="{{type}}" data-secondtype="{{secondType}}" data-pokemon="{{name}}">
-        <p><a href="#">{{name}}</a></p>
+      <li class="list-name" data-id="{{id}}" data-type="{{type}}" data-secondtype="{{secondType}}">
+        <p>{{name}}</p>
       </li>
     </script>
 
     <script id="pokemon-template" type="text/x-handlebars-template">
-      <li class="dex-entry" data-id="{{genFilter}}" data-type="{{type}}" data-secondtype="{{secondType}}">
-        <p>Name: {{name}}</p>
-        <p><img class="sprite" src="{{sprite}}"></p>
+      <li class="dex-entry" data-id="{{id}}" data-type="{{type}}" data-secondtype="{{secondType}}">
         <p>ID: {{id}}</p>
-        <p>Type: {{type}} {{secondType}}</p>
+        <p><img class="sprite" src="{{sprite}}"></p>
+        <p><h3>{{name}}</h3></p>
+        <!-- <p><img src="img/_pokemontypes-{{type}}.png"> <img src="img/_pokemontypes-{{secondType}}.png"></p> -->
+        <p>{{type}} {{secondType}}</p>
+        <p>Description text goes here.</p>
         <p>Base Stats</p>
-        <p>HP: {{hp}} Atk: {{atk}} Def: {{def}} Sp.Atk: {{spAtk}} Sp.Def: {{spDef}} Speed: {{speed}}</p>
+        <p>HP: {{hp}} Atk: {{atk}} Def: {{def}}</p>
+        <p>Sp.Atk: {{spAtk}} Sp.Def: {{spDef}} Speed: {{speed}}</p>
       </li>
     </script>
   </head>

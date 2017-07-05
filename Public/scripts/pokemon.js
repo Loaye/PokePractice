@@ -24,13 +24,17 @@ function Pokemon(data){
 }
 
 var pokedex = [];
+var desc = [];
 Pokemon.all = [];
 var pokeUrl = 'https://pokeapi.co/api/v2/';
 
 var loadPokedex = function(pokedex){
+  if(!localStorage.rawData) {
+    localStorage.rawData = JSON.stringify(pokedex);
+    console.log('localStorage: ', localStorage.rawData.length);
+  }
   Pokemon.all = pokedex.map(function(data, idx, arr) {
-    console.log('ID: ', data.id, ' Name: ', data.name);
-    return new Pokemon(data);
+  return new Pokemon(data);
   });
   pokedexView.initIndexPage();
 }
@@ -48,10 +52,11 @@ Pokemon.prototype.pokemonToHtml = function() {
 Pokemon.fetchAll = function() {
   if(localStorage.rawData) {
     pokedex = JSON.parse(localStorage.rawData);
+    console.log('loaded pokedex: ', pokedex);
     pokedexView.initIndexPage();
   } else {
     $.ajax({
-      url: pokeUrl + 'pokemon/?limit=5',
+      url: pokeUrl + 'pokemon/?limit=20',
       type: 'GET',
       success: function(data) {
         for(var idx in data.results) {
@@ -59,17 +64,12 @@ Pokemon.fetchAll = function() {
           .then(function(data){
             console.log('data: ', data);
             pokedex.push(data);
-          })
+          });
         }
       },
       error: function(err) {
         console.err('err: ', err);
       }
-    }).then(function(){
-        function savePokemonData(pokedex){
-          localStorage.rawData = JSON.stringify(pokedex);
-          console.log('localStorage: ', localStorage.rawData);
-        }
-      })
-    }
+    })
+  }
 }

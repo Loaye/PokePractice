@@ -1,8 +1,5 @@
 /*Site Styles*/
-html {
-  background-color: #00181D;
-  color: #f3f3f3;
-}
+
 
 /*Nav Styles*/
 ul {
@@ -24,4 +21,20 @@ li img {
   width: 25px;
   height: 25px;
   margin: 5px 5px;
+}
+
+.sprite {
+  display: block;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-left: none;
+}
+
+.types, .stats, .description {
+  padding-right: 50px;
+  padding-top: 50px;
+}
+
+.stats {
+  padding-left: 113px;
 }

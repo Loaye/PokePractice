@@ -1,1 +1,10 @@
 /*MEDIA QUERY HERE*/
+
+#sidebar {
+  float: left;
+  width: 200px;
+  height: 1000px;
+  background-color: #454545;
+  padding: none;
+  margin: none;
+}

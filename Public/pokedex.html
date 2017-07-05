@@ -11,10 +11,19 @@
     <meta name="viewport" content="width=device-width initial-scale=1">
 
     <!-- Handlebars Template -->
-    <script id="template" type="text/x-handlebars-template">
-      <h3>{{id}}</h3>
-      <h3>{{name}}</h3>
-      <h3>{{type}}</h3>
+    <script id="list-template" type="text/x-handlebars-template">
+      <li class="list-name"  data-type="{{type}}" data-secondtype="{{secondType}}" data-pokemon="{{name}}">
+        <p><a href="#">{{name}}</a></p>
+      </li>
+    </script>
+
+    <script id="pokemon-template" type="text/x-handlebars-template">
+      <li class="dex-entry" data-id="{{genFilter}}" data-type="{{type}}" data-secondtype="{{secondType}}">
+        <p>Name: {{name}}</p>
+        <p><img class="sprite" src="{{sprite}}"></p>
+        <p>ID: {{id}}</p>
+        <p>Type: {{type}} {{secondType}}</p>
+      </li>
     </script>
   </head>
   <body>
@@ -30,7 +39,29 @@
 
     <main>
       <div class="search l-float">
-        Hello test
+
+        <select id="gen-filter">
+            <option value="">Select Generation</option>
+            <option value="first-gen">1st Generation (RBY)</option>
+            <option value="second-gen">2nd Generation (GSC)</option>
+          </select>
+
+          <select id="type-filter">
+            <option value="">Select Type</option>
+            <option value="grass">Grass</option>
+            <option value="water">Water</option>
+            <option value="fire">Fire</option>
+            <option value="bug">Bug</option>
+            <option value="poison">Poison</option>
+            <option value="normal">Normal</option>
+            <option value="electric">Electric</option>
+          </select>
+
+          <div id="list">
+            <ul>
+            <!-- List filtered Pokemon names here-->
+          </ul>
+          </div>
       </div>
       <div class="displayed r-float">
         <section="sprites l-float">
@@ -46,6 +77,13 @@
           <img src="http://placehold.it/150x150">
         </section>
       </div>
+      </section>
+      <div id="pokedex">
+        <ul>
+          <!-- Selected Pokemon info displays here -->
+        </ul>
+      </div>
+
     </main>
 
     <footer>
@@ -53,6 +91,11 @@
     </footer>
   </body>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="app.js"></script>
+  <script src="vendors/scripts/jquery-3.2.1.min.js"></script>
+  <script src="vendors/scripts/handlebars.js"></script>
+  <script src="scripts/pokedexView.js"></script>
+  <script src="scripts/pokemon.js"></script>
+  <script>
+    Pokemon.fetchAll();
+  </script>
 </html>

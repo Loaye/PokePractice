@@ -3,33 +3,33 @@
 const pokedexView = {};
 
 pokedexView.handleGenFilter = function() {
-  var firstGen;
-  // firstGen = 1 - 151
-  var secondGen;
-  // secondGen = 152 - 251
-  var thirdGen;
-  // thirdGen = 252 - 386
-  var fourthGen;
-  // fourthGen = 387 - 493
-  var fifthGen;
-  // fifthGen = 494 - 649
-  var sixthGen;
-  // sixthGen = 650 - 721
-  var seventhGen;
-  // seventhGen = 722 - 802
-
   $('#gen-filter').on('change', function() {
-    if($(this).val() === 'first-gen') {
-      $('.dex-entry').hide();
-      $(`.dex-entry[data-id="${firstGen}"]`).fadeIn();
+    if($(this).val()) {
+      $('.list-name').hide();
+      $(`.list-name[data-gen="${$(this).val()}"]`).fadeIn();
+    } else {
+      $('.list-name').fadeIn();
     }
-    if($(this).val() === 'second-gen'){
-      $('.dex-entry').hide();
-      $(`.dex-entry[data-id="${secondGen}"]`).fadeIn();
-    }
-    if($(this).val() === ''){
-      $('.dex-entry').fadeIn();
-    }
+  })
+}
+
+pokedexView.handleBtn = function() {
+  $('#choose').on('click', function() {
+    console.log('Selected Gen: ' + $('#gen-filter').val() + ', Selected Type: ' + $('#type-filter').val());
+
+  if($('#gen-filter').val() && $('#type-filter').val()){
+    $('.list-name').hide();
+    $(`.list-name[data-gen="${$('#gen-filter').val()}"][data-type="${$('#type-filter').val()}"]`).fadeIn();
+    $(`.list-name[data-gen="${$('#gen-filter').val()}"][data-secondType="${$('#type-filter').val()}"]`).fadeIn();
+  } else if($('#type-filter').val()){
+    $('.list-name').hide();
+    $(`.list-name[data-type="${$('#type-filter').val()}"]`).fadeIn();
+  } else if($('#gen-filter').val()){
+    $('.list-name').hide();
+    $(`.list-name[data-gen="${$('#gen-filter').val()}"]`).fadeIn();
+  } else {
+    $('.list-name').fadeIn();
+  }
   })
 }
 
@@ -62,7 +62,8 @@ pokedexView.initIndexPage = function() {
 
 $(document).ready(function () {
   console.log('document ready');
-  pokedexView.handleGenFilter();
-  pokedexView.handleTypeFilter();
+//  pokedexView.handleGenFilter();
+//  pokedexView.handleTypeFilter();
+  pokedexView.handleBtn();
   pokedexView.handleClick();
 })

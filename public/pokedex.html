@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/pokedexStyle.css">
+    <link rel="stylesheet" href="styles/handlebars.css">
     <link rel="stylesheet" href="styles/modules.css">
     <meta name="viewport" content="width=device-width initial-scale=1">
 
@@ -19,7 +20,7 @@
 
     <script id="pokemon-template" type="text/x-handlebars-template">
       <li class="dex-entry" data-id="{{id}}" data-type="{{type}}" data-secondtype="{{secondType}}">
-        <p>ID: {{id}}</p>
+        <p class="id">ID: {{id}}</p>
         <p><img class="sprite" src="{{sprite}}"></p>
         <p><h3>{{name}}</h3></p>
         <p><img src="vendors/images/pokemonTypes/pokemonLabel{{type}}.png"> <img src="vendors/images/pokemonTypes/pokemonLabel{{secondType}}.png"></p>
@@ -84,31 +85,18 @@
           </ul>
           </div>
       </div>
-      <div class="displayed r-float">
-        <section="sprites l-float">
-          <img src="http://placehold.it/300x300">
-        </section>
-        <section="stats l-float">
-          <img src="http://placehold.it/150x150">
-        </section>
-        <section="weakness l-float">
-          <img src="http://placehold.it/150x150">
-        </section>
-        <section="description l-float">
-          <img src="http://placehold.it/150x150">
-        </section>
-      </div>
-      </section>
-      <div id="pokedex">
-        <ul>
-          <!-- Selected Pokemon info displays here -->
-        </ul>
-      </div>
 
+      <section class="displayed r-float">
+        <div id="pokedex">
+          <ul>
+            <!-- Selected Pokemon info displays here -->
+          </ul>
+        </div>
+      </section>
     </main>
 
     <footer>
-      Some Content Here
+      Follow the dev team <a href="https://twitter.com/upmdra">@upmdra</a>
     </footer>
   </body>
 

@@ -1,0 +1,56 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*Floats*/
+.l-float {
+  float: left
+}
+
+.r-float {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/*Search Section Styles*/
+.search {
+  position: fixed;
+  height: 4000px;
+  width: 32%;
+  background-color: #454545;
+  box-shadow: 2px 0px 4px #454545;
+}
+
+.sprite {
+  margin-left: 295px;
+  height: 200px;
+  width: 200px;
+}
+
+.displayed{
+  margin-right: 20%;
+}
+
+#gen-filter, #type-filter{
+  border: solid 2px #191919;
+  background-color: #292929;
+  color: #F0F0F0;
+  font-size: 20px;
+}
+
+header{
+  height: 55px;
+}
+
+/*Displayed Section Styles*/
+/*
+white: #F0F0F0
+light-gray: #454545
+gray: #292929
+dark-gray: #191919
+red: #FF2929
+yellow: #E5C200
+*/

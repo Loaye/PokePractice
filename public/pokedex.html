@@ -29,7 +29,21 @@
     </script>
   </head>
   <body>
-    <header>
+    
+    <header class="mobile-head">
+      <button class="hamburger">&#9776;</button>
+      <button class="cross">&#735;</button>
+    </header>
+
+    <div class="menu">
+      <ul>
+        <a href="index.html"><li>HOME</li></a>
+        <a href="pokedex.html"><li>POKEDEX</li></a>
+        <a href="teambuilder.html"><li>TEAM BUILDER</li></a>
+      </ul>
+    </div>
+
+    <header class="desktop-head">
       <nav>
         <ul>
           <li><a href="index.html"><img src="vendors/images/pokemon/masterball.png">HOME</a></li>
@@ -88,6 +102,7 @@
   </body>
   <script src="vendors/scripts/jquery-3.2.1.min.js"></script>
   <script src="vendors/scripts/handlebars.js"></script>
+  <script src="scripts/mobile.js"></script>
   <script src="scripts/pokedexView.js"></script>
   <script src="scripts/pokemon.js"></script>
   <script>

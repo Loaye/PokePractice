@@ -13,6 +13,26 @@ pokedexView.handleGenFilter = function() {
   })
 }
 
+pokedexView.handleBtn = function() {
+  $('#choose').on('click', function() {
+    console.log('Selected Gen: ' + $('#gen-filter').val() + ', Selected Type: ' + $('#type-filter').val());
+
+  if($('#gen-filter').val() && $('#type-filter').val()){
+    $('.list-name').hide();
+    $(`.list-name[data-gen="${$('#gen-filter').val()}"][data-type="${$('#type-filter').val()}"]`).fadeIn();
+    $(`.list-name[data-gen="${$('#gen-filter').val()}"][data-secondType="${$('#type-filter').val()}"]`).fadeIn();
+  } else if($('#type-filter').val()){
+    $('.list-name').hide();
+    $(`.list-name[data-type="${$('#type-filter').val()}"]`).fadeIn();
+  } else if($('#gen-filter').val()){
+    $('.list-name').hide();
+    $(`.list-name[data-gen="${$('#gen-filter').val()}"]`).fadeIn();
+  } else {
+    $('.list-name').fadeIn();
+  }
+  })
+}
+
 pokedexView.handleTypeFilter = function() {
   $('#type-filter').on('change', function() {
     if($(this).val()) {
@@ -42,7 +62,8 @@ pokedexView.initIndexPage = function() {
 
 $(document).ready(function () {
   console.log('document ready');
-  pokedexView.handleGenFilter();
-  pokedexView.handleTypeFilter();
+//  pokedexView.handleGenFilter();
+//  pokedexView.handleTypeFilter();
+  pokedexView.handleBtn();
   pokedexView.handleClick();
 })

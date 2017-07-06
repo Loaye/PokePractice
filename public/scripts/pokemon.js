@@ -21,7 +21,7 @@ function Pokemon(data){
     this.gen = 'fifth-gen';
   if(this.id > 649 && this.id < 722)
     this.gen = 'sixth-gen';
-  if(this.id > 721)
+  if(this.id > 721 && this.id < 803)
     this.gen = 'seventh-gen';
 
 // Pokemon's type. If a Pokemon is not dual type, secondType is 'blank'.
@@ -73,7 +73,7 @@ Pokemon.fetchAll = function() {
     loadPokedex(pokedex);
   } else {
     $.ajax({
-      url: 'https://pokeapi.co/api/v2/pokemon/?offset=490&?limit=20',
+      url: 'https://pokeapi.co/api/v2/pokemon/?offset=140&?limit=20',
       type: 'GET',
       datatype: 'jsonp',
       success: function(data) {

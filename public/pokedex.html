@@ -12,7 +12,7 @@
 
     <!-- Handlebars Template -->
     <script id="list-template" type="text/x-handlebars-template">
-      <li class="list-name" data-id="{{id}}" data-type="{{type}}" data-secondtype="{{secondType}}">
+      <li class="list-name" data-id="{{id}}" data-gen="{{gen}}" data-type="{{type}}" data-secondtype="{{secondType}}">
         <p>{{id}} - {{name}}</p>
       </li>
     </script>
@@ -23,7 +23,7 @@
         <p><img class="sprite" src="{{sprite}}"></p>
         <p><h3>{{name}}</h3></p>
         <p><img src="vendors/images/pokemonTypes/pokemonLabel{{type}}.png"> <img src="vendors/images/pokemonTypes/pokemonLabel{{secondType}}.png"></p>
-        <p>Description text goes here.</p>
+        <p>{{desc}}</p>
         <p>Base Stats</p>
         <p>HP: {{hp}} Atk: {{atk}} Def: {{def}}</p>
         <p>Sp.Atk: {{spAtk}} Sp.Def: {{spDef}} Speed: {{speed}}</p>
@@ -45,7 +45,7 @@
       <div class="search l-float">
 
         <select id="gen-filter">
-            <option value="">Select Generation</option>
+            <option value="">All Generations</option>
             <option value="first-gen">1st Generation (RBY)</option>
             <option value="second-gen">2nd Generation (GSC)</option>
             <option value="third-gen">3rd Generation (RuSaEm)</option>
@@ -56,7 +56,7 @@
           </select>
 
           <select id="type-filter">
-            <option value="">Select Type</option>
+            <option value="">All Types</option>
             <option value="normal">Normal</option>
             <option value="fighting">Fighting</option>
             <option value="flying">Flying</option>

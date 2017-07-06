@@ -1,7 +1,11 @@
 /*Site Styles*/
-body {
-  background-color: #00181D;
-  color: #f3f3f3;
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  background-color: #292929;
+  color: #f0f0f0;
 }
 
 /*Nav Styles*/
@@ -27,6 +31,35 @@ li img {
 }
 
 .sprite {
-  width: 200px;
-  height: 200px;
+  display: block;
+  margin: 0 auto;
+  padding-left: none;
 }
+
+.types, .stats, .description {
+  padding-right: 50px;
+  padding-top: 50px;
+}
+
+.stats {
+  padding-left: 113px;
+}
+
+.dex-entry {
+  margin: 0 auto;
+  border: solid 3px #f3f3f3;
+  border-radius: 10px;
+  padding: 10px;
+  background: #717171;
+  margin: 10px 0px;
+
+}
+
+/*
+white: #F0F0F0
+light-gray: #454545
+gray: #292929
+dark-gray: #191919
+red: #FF2929
+yellow: #E5C200
+*/

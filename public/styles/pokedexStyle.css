@@ -1,3 +1,7 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
 /*Floats*/
 .l-float {
   float: left
@@ -13,10 +17,29 @@
 
 /*Search Section Styles*/
 .search {
-  height: 853px;
+  position: fixed;
+  height: 4000px;
   width: 32%;
-  background-color: #002A52;
-  box-shadow: 2px 0px 4px #002A52;
+  background-color: #454545;
+  box-shadow: 2px 0px 4px #454545;
+}
+
+.sprite {
+  margin-left: 290px;
+  height: 200px;
+  width: 200px;
+}
+
+.displayed{
+  margin-right: 20%;
 }
 
 /*Displayed Section Styles*/
+/*
+white: #F0F0F0
+light-gray: #454545
+gray: #292929
+dark-gray: #191919
+red: #FF2929
+yellow: #E5C200
+*/

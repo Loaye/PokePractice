@@ -33,7 +33,6 @@ li img {
 .sprite {
   display: block;
   margin: 0 auto;
-  padding-top: 100px;
   padding-left: none;
 }
 
@@ -44,6 +43,16 @@ li img {
 
 .stats {
   padding-left: 113px;
+}
+
+.dex-entry {
+  margin: 0 auto;
+  border: solid 3px #f3f3f3;
+  border-radius: 10px;
+  padding: 10px;
+  background: #717171;
+  margin: 10px 0px;
+
 }
 
 /*

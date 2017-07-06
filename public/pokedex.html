@@ -20,14 +20,14 @@
 
     <script id="pokemon-template" type="text/x-handlebars-template">
       <li class="dex-entry" data-id="{{id}}" data-type="{{type}}" data-secondtype="{{secondType}}">
-        <p>ID: {{id}}</p>
+        <p class="id">ID: {{id}}</p>
         <p><img class="sprite" src="{{sprite}}"></p>
-        <p><h3>{{name}}</h3></p>
-        <p><img src="vendors/images/pokemonTypes/pokemonLabel{{type}}.png"> <img src="vendors/images/pokemonTypes/pokemonLabel{{secondType}}.png"></p>
-        <p>Description text goes here.</p>
-        <p>Base Stats</p>
-        <p>HP: {{hp}} Atk: {{atk}} Def: {{def}}</p>
-        <p>Sp.Atk: {{spAtk}} Sp.Def: {{spDef}} Speed: {{speed}}</p>
+        <p><h3 class="style-name">{{name}}</h3></p>
+        <p><img class="type-one" src="vendors/images/pokemonTypes/pokemonLabel{{type}}.png"> <img class="type-two" src="vendors/images/pokemonTypes/pokemonLabel{{secondType}}.png"></p>
+        <p class="info">Description text goes here.</p>
+        <p class="base-stats">Base Stats</p>
+        <p class="normal-stats">HP: {{hp}} Atk: {{atk}} Def: {{def}}</p>
+        <p class="special-stats">Sp.Atk: {{spAtk}} Sp.Def: {{spDef}} Speed: {{speed}}</p>
       </li>
     </script>
   </head>
@@ -84,31 +84,18 @@
           </ul>
           </div>
       </div>
-      <div class="displayed r-float">
-        <!-- <section="sprites l-float">
-          <img src="http://placehold.it/300x300">
-        </section>
-        <section="stats l-float">
-          <img src="http://placehold.it/150x150">
-        </section>
-        <section="weakness l-float">
-          <img src="http://placehold.it/150x150">
-        </section>
-        <section="description l-float">
-          <img src="http://placehold.it/150x150">
-        </section> -->
-      </div>
-      </section>
-      <div id="pokedex">
-        <ul>
-          <!-- Selected Pokemon info displays here -->
-        </ul>
-      </div>
 
+      <section class="displayed r-float">
+        <div id="pokedex">
+          <ul>
+            <!-- Selected Pokemon info displays here -->
+          </ul>
+        </div>
+      </section>
     </main>
 
     <footer>
-      Some Content Here
+      Follow the dev team <a href="https://twitter.com/upmdra">@upmdra</a>
     </footer>
   </body>
 

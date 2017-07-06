@@ -10,7 +10,7 @@ function Pokemon(data){
   if(data.types.length > 1) {
     this.secondType = data.types[1].type.name;
   } else {
-    this.secondType = '';
+    this.secondType = 'blank';
   }
 
 // Pokemon's base stats

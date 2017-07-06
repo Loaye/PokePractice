@@ -1,4 +1,4 @@
-* {
+body {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -25,13 +25,24 @@
 }
 
 .sprite {
-  margin-left: 290px;
+  margin-left: 295px;
   height: 200px;
   width: 200px;
 }
 
 .displayed{
   margin-right: 20%;
+}
+
+#gen-filter, #type-filter{
+  border: solid 2px #191919;
+  background-color: #292929;
+  color: #F0F0F0;
+  font-size: 20px;
+}
+
+header{
+  height: 55px;
 }
 
 /*Displayed Section Styles*/

@@ -1,5 +1,19 @@
-* {
+html {
   font-family: 'Montserrat', sans-serif;
+}
+
+header {
+background-color: #191919;
+height: 70px;
+}
+
+header ul li {
+  margin-top: 20px;
+}
+
+header ul li img {
+  float: left;
+  margin-top: 0px;
 }
 
 /*Floats*/
@@ -17,11 +31,14 @@
 
 /*Search Section Styles*/
 .search {
-  position: fixed;
-  height: 4000px;
+  float: left;
+  height: 950px;
   width: 32%;
-  background-color: #454545;
-  box-shadow: 2px 0px 4px #454545;
+  background-color: #87BBBF;
+  /*box-shadow: 2px 0px 4px #87BBBF;*/
+  padding: 15px;
+  box-sizing: border-box;
+  margin-top: -150px;
 }
 
 .sprite {
@@ -32,14 +49,3 @@
     padding: 15px;
     background: #454545;
   };
-
-
-/*Displayed Section Styles*/
-/*
-white: #F0F0F0
-light-gray: #454545
-gray: #292929
-dark-gray: #191919
-red: #FF2929
-yellow: #E5C200
-*/

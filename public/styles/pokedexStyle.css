@@ -1,21 +1,3 @@
-html {
-  font-family: 'Montserrat', sans-serif;
-}
-
-header {
-background-color: #191919;
-height: 70px;
-}
-
-header ul li {
-  margin-top: 20px;
-}
-
-header ul li img {
-  float: left;
-  margin-top: 0px;
-}
-
 /*Floats*/
 .l-float {
   float: left
@@ -34,8 +16,8 @@ header ul li img {
   float: left;
   height: 950px;
   width: 32%;
-  background-color: #87BBBF;
-  /*box-shadow: 2px 0px 4px #87BBBF;*/
+  background-color: #454545;
+  box-shadow: 2px 0px 4px #454545;
   padding: 15px;
   box-sizing: border-box;
   margin-top: -150px;

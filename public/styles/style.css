@@ -1,12 +1,9 @@
 /*Site Styles*/
 html {
   font-family: 'Montserrat', sans-serif;
-}
-
-/*html {
-  background-color: #87BBBF;
+  background-color: #8C8371;
   color: #f0f0f0;
-}*/
+}
 
 /*Nav Styles*/
 ul {
@@ -53,4 +50,5 @@ li img {
   margin: 10px 0px;
   margin-top: -40px;
   margin-right: -250px;
+  background: url('vendors/images/pokemon/card.png')
 }

@@ -60,22 +60,22 @@ Pokemon.fetchAll = function() {
     console.log('loaded pokedex: ', pokedex);
     pokedexView.initIndexPage();
   } else {
-    // $.ajax({
-    //   url: pokeUrl + 'pokemon/?limit=10',
-    //   type: 'GET',
-    //   success: function(data) {
-        for(var i = 1;i < 30; i++) {
-          $.getJSON(pokeUrl + 'pokemon/' + i)
+    $.ajax({
+      url: pokeUrl + 'pokemon/?limit=10',
+      type: 'GET',
+      datatype: 'jsonp',
+      success: function(data) {
+        for(var i in data.results) {
+          $.getJSON(data.results[i].url)
           .then(function(data){
             console.log('data: ', data);
             pokedex.push(data);
           });
         }
-  //     },
-  //     error: function(err) {
-  //       console.err('err: ', err);
-  //     }
-  //   })
-  // }
+      },
+      error: function(err) {
+        console.err('err: ', err);
+      }
+    });
   }
 }

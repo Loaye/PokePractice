@@ -2,8 +2,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-
-
 /*Floats*/
 .l-float {
   float: left
@@ -24,6 +22,16 @@
   width: 32%;
   background-color: #454545;
   box-shadow: 2px 0px 4px #454545;
+}
+
+.sprite {
+  margin-left: 290px;
+  height: 200px;
+  width: 200px;
+}
+
+.displayed{
+  margin-right: 20%;
 }
 
 /*Displayed Section Styles*/

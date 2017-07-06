@@ -5,26 +5,7 @@ function Pokemon(data){
   this.name = data.name.charAt(0).toUpperCase() + data.name.slice(1);
   this.sprite = data.sprites.front_default;
 
-// Placeholder description text for Pokemon.
-  this.desc = 'Description text goes here.'
-
-// Pokemon's generation, for filtering.
-  if(this.id < 152)
-    this.gen = 'first-gen';
-  if(this.id > 151 && this.id < 252)
-    this.gen = 'second-gen';
-  if(this.id > 251 && this.id < 387)
-    this.gen = 'third-gen';
-  if(this.id > 386 && this.id < 494)
-    this.gen = 'fourth-gen';
-  if(this.id > 493 && this.id < 650)
-    this.gen = 'fifth-gen';
-  if(this.id > 649 && this.id < 722)
-    this.gen = 'sixth-gen';
-  if(this.id > 721 && this.id < 803)
-    this.gen = 'seventh-gen';
-
-// Pokemon's type. If a Pokemon is not dual type, secondType is 'blank'.
+// Pokemon's type. If a Pokemon is not dual type, secondType is an empty string.
   this.type = data.types[0].type.name;
   if(data.types.length > 1) {
     this.secondType = data.types[1].type.name;
@@ -43,10 +24,15 @@ function Pokemon(data){
 }
 
 var pokedex = [];
+var desc = [];
 Pokemon.all = [];
 var pokeUrl = 'https://pokeapi.co/api/v2/';
 
 var loadPokedex = function(pokedex){
+  if(!localStorage.rawData) {
+    localStorage.rawData = JSON.stringify(pokedex);
+    console.log('localStorage: ', localStorage.rawData.length);
+  }
   Pokemon.all = pokedex.map(function(data, idx, arr) {
   return new Pokemon(data);
   });
@@ -67,28 +53,23 @@ Pokemon.fetchAll = function() {
   if(localStorage.rawData) {
     pokedex = JSON.parse(localStorage.rawData);
     console.log('loaded pokedex: ', pokedex);
-    loadPokedex(pokedex);
+    pokedexView.initIndexPage();
   } else {
     $.ajax({
-      url: 'https://pokeapi.co/api/v2/pokemon/?offset=140&?limit=20',
+      url: pokeUrl + 'pokemon/?limit=20',
       type: 'GET',
-      datatype: 'jsonp',
       success: function(data) {
-        for(var i in data.results) {
-          $.getJSON(data.results[i].url)
+        for(var idx in data.results) {
+          $.getJSON(data.results[idx].url)
           .then(function(data){
             console.log('data: ', data);
             pokedex.push(data);
-            if(pokedex.length === 20){
-               localStorage.rawData = JSON.stringify(pokedex);
-               loadPokedex(pokedex);
-             }
           });
         }
       },
       error: function(err) {
-        console.error('err: ', err);
+        console.err('err: ', err);
       }
-    });
+    })
   }
 }

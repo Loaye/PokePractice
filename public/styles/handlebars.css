@@ -53,7 +53,7 @@ li p img {
 }
 
 .info, .base-stats, .normal-stats, .special-stats {
-  border: solid 3px #f3f3f3;
+  border: solid 3px #191919;
   border-radius: 10px;
   padding: 10px;
   background: #454545;

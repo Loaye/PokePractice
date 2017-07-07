@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Pokedex</title>
@@ -119,6 +118,7 @@
     <div class="search l-float">
       <form id="filter-form">
         <select id="gen-filter">
+
               <option value="">All Generations</option>
               <option value="first-gen">1st Generation (RBY)</option>
               <option value="second-gen">2nd Generation (GSC)</option>
@@ -182,4 +182,25 @@
   Pokemon.fetchAll();
 </script>
 
+      <section class="displayed">
+        <div id="pokedex">
+          <ul>
+            <!-- Selected Pokemon info displays here -->
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Follow the dev team <a href="https://twitter.com/upmdra">@upmdra</a></p>
+    </footer>
+  </body>
+
+  <script src="vendors/scripts/jquery-3.2.1.min.js"></script>
+  <script src="vendors/scripts/handlebars.js"></script>
+  <script src="scripts/pokedexView.js"></script>
+  <script src="scripts/pokemon.js"></script>
+  <script>
+    Pokemon.fetchAll();
+  </script>
 </html>

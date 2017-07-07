@@ -37,3 +37,8 @@
 .info {
   display: none;
 }
+
+.poke-name {
+  margin-top: 10px;
+  font-size: 38px;
+}

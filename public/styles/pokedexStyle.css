@@ -35,11 +35,14 @@
   background: #454545;
 }
 
-.info {
-  display: none;
-}
-
 .poke-name {
   margin-top: 10px;
   font-size: 38px;
+}
+
+.info {
+  max-width: 410px;
+  padding: 7px;
+  height: 150px;
+  overflow: scroll;
 }

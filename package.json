@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Loaye/PokePractice#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "page.js": "^4.13.3"
   }
 }

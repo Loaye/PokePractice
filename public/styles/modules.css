@@ -13,6 +13,10 @@ header {
   width: 100%;
 }
 
+footer{
+  display: none;
+}
+
 h2 {
   margin-bottom: 30px;
 }

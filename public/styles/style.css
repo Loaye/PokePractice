@@ -52,8 +52,17 @@ li img {
   padding: 10px;
   background: #717171;
   margin: 10px 0px;
-
 }
+
+.type .second-type{
+  margin: 0;
+  display: block;
+  width: auto;
+}
+
+/*h3 {
+  padding-top: 10px;
+}*/
 
 /*
 white: #F0F0F0

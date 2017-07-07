@@ -1,69 +1,124 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Pokedex</title>
-    <link rel="stylesheet" href="vendors/styles/reset.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/pokedexStyle.css">
-    <link rel="stylesheet" href="styles/handlebars.css">
-    <link rel="stylesheet" href="styles/modules.css">
-    <meta name="viewport" content="width=device-width initial-scale=1">
 
-    <!-- Handlebars Template -->
-    <script id="list-template" type="text/x-handlebars-template">
-      <li class="list-name" data-id="{{id}}" data-gen="{{gen}}" data-type="{{type}}" data-secondtype="{{secondType}}">
-        <p>{{id}} - {{name}}</p>
-      </li>
-    </script>
+<head>
+  <meta charset="utf-8">
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="vendors/styles/reset.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/pokedexStyle.css">
+  <link rel="stylesheet" href="styles/handlebars.css">
+  <link rel="stylesheet" href="styles/modules.css">
+  <meta name="viewport" content="width=device-width initial-scale=1">
 
-    <script id="pokemon-template" type="text/x-handlebars-template">
-      <li class="dex-entry" data-id="{{id}}" data-type="{{type}}" data-secondtype="{{secondType}}">
-        <p class="id">ID: {{id}}</p>
-        <p><img class="sprite" src="{{sprite}}"></p>
-        <p><h3>{{name}}</h3></p>
-        <p><img src="vendors/images/pokemonTypes/pokemonLabel{{type}}.png"> <img src="vendors/images/pokemonTypes/pokemonLabel{{secondType}}.png"></p>
-        <p>{{desc}}</p>
-        <p>Base Stats</p>
-        <p>HP: {{hp}} Atk: {{atk}} Def: {{def}}</p>
-        <p>Sp.Atk: {{spAtk}} Sp.Def: {{spDef}} Speed: {{speed}}</p>
-      </li>
-    </script>
-  </head>
-  <body>
+  <!-- Handlebars Template -->
+  <script id="list-template" type="text/x-handlebars-template">
+    <li class="list-name" data-id="{{id}}" data-gen="{{gen}}" data-type="{{type}}" data-secondtype="{{secondType}}">
+      <p>{{id}} - {{name}}</p>
+    </li>
+  </script>
 
-    <div class="sidebar">
-  <button class="sidebar-toggle"><i class="fa fa-plus icon"></i></button>
-</div>
+  <script id="pokemon-template" type="text/x-handlebars-template">
+    <li class="dex-entry" data-id="{{id}}" data-type="{{type}}" data-secondtype="{{secondType}}">
+      <p class="id">ID: {{id}}</p>
+      <p><img class="sprite" src="{{sprite}}"></p>
+      <p>
+        <h3>{{name}}</h3></p>
+      <p><img class="type" src="vendors/images/pokemonTypes/pokemonLabel{{type}}.png"> <img class="second-type" src="vendors/images/pokemonTypes/pokemonLabel{{secondType}}.png"></p>
+      <p>{{desc}}</p>
+      <p>Base Stats</p>
+      <p>HP: {{hp}} Atk: {{atk}} Def: {{def}}</p>
+      <p>Sp.Atk: {{spAtk}} Sp.Def: {{spDef}} Speed: {{speed}}</p>
+    </li>
+  </script>
+</head>
 
-    <header class="mobile-head">
-      <button class="hamburger">&#9776;</button>
-      <button class="cross">&#735;</button>
-    </header>
+<body>
 
-    <div class="menu">
-      <ul>
-        <a href="index.html"><li>HOME</li></a>
-        <a href="pokedex.html"><li>POKEDEX</li></a>
-        <a href="teambuilder.html"><li>TEAM BUILDER</li></a>
-      </ul>
+  <header class="mobile-head">
+    <button class="hamburger">&#9776;</button>
+    <button class="cross">&#735;</button>
+  </header>
+
+  <div class="menu">
+    <ul>
+      <a href="index.html">
+        <li>HOME</li>
+      </a>
+      <a href="pokedex.html">
+        <li>POKEDEX</li>
+      </a>
+      <a href="teambuilder.html">
+        <li>TEAM BUILDER</li>
+      </a>
+    </ul>
+  </div>
+
+  <div class="sidebar">
+    <div class="label">
+      <img src="http://www.clker.com/cliparts/r/c/z/k/x/c/greater-than-hi.png" alt="" />
     </div>
 
-    <header class="desktop-head">
-      <nav>
-        <ul>
-          <li><a href="index.html"><img src="vendors/images/pokemon/masterball.png">HOME</a></li>
-          <li><a href="pokedex.html"><img src="vendors/images/pokemon/pokedex.png">POKEDEX</a></li>
-          <li><a href="teambuilder.html"><img src="vendors/images/pokemon/teamRocket.png">TEAM BUILDER</a></li>
-        </ul>
-      </nav>
-    </header>
+    <p class="clicktopin">
+      <select id="gen-filter" placeholder="select by generation">
+            <option value="">All Generations</option>
+            <option value="first-gen">1st Generation (RBY)</option>
+            <option value="second-gen">2nd Generation (GSC)</option>
+            <option value="third-gen">3rd Generation (RuSaEm)</option>
+            <option value="fourth-gen">4th Generation (DiPePl)</option>
+            <option value="fifth-gen">5th Generation (BlWh)</option>
+            <option value="sixth-gen">6th Generation (XY)</option>
+            <option value="seventh-gen">7th Generation (SuMo)</option>
+          </select>
 
-    <main>
-      <div class="search l-float">
-        <form id="filter-form">
-          <select id="gen-filter">
+      <select id="type-filter" placeholder="select by id">
+            <option value="">All Types</option>
+            <option value="normal">Normal</option>
+            <option value="fighting">Fighting</option>
+            <option value="flying">Flying</option>
+            <option value="poison">Poison</option>
+            <option value="ground">Ground</option>
+            <option value="rock">Rock</option>
+            <option value="bug">Bug</option>
+            <option value="ghost">Ghost</option>
+            <option value="steel">Steel</option>
+            <option value="fire">Fire</option>
+            <option value="water">Water</option>
+            <option value="grass">Grass</option>
+            <option value="electric">Electric</option>
+            <option value="psychic">Psychic</option>
+            <option value="ice">Ice</option>
+            <option value="dragon">Dragon</option>
+            <option value="dark">Dark</option>
+            <option value="fairy">Fairy</option>
+          </select>
+          <input type="button" id="choose" value="Choose!">
+        </p>
+    <br/>
+    <div id="list">
+      <ul>
+        <!-- List filtered Pokemon names here-->
+      </ul>
+    </div>
+    <br/>
+
+  </div>
+
+  <header class="desktop-head">
+    <nav>
+      <ul>
+        <li><a href="index.html"><img src="vendors/images/pokemon/masterball.png">HOME</a></li>
+        <li><a href="pokedex.html"><img src="vendors/images/pokemon/pokedex.png">POKEDEX</a></li>
+        <li><a href="teambuilder.html"><img src="vendors/images/pokemon/teamRocket.png">TEAM BUILDER</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="search l-float">
+      <form id="filter-form">
+        <select id="gen-filter">
               <option value="">All Generations</option>
               <option value="first-gen">1st Generation (RBY)</option>
               <option value="second-gen">2nd Generation (GSC)</option>
@@ -74,7 +129,7 @@
               <option value="seventh-gen">7th Generation (SuMo)</option>
             </select>
 
-            <select id="type-filter">
+        <select id="type-filter">
               <option value="">All Types</option>
               <option value="normal">Normal</option>
               <option value="fighting">Fighting</option>
@@ -95,35 +150,36 @@
               <option value="dark">Dark</option>
               <option value="fairy">Fairy</option>
             </select>
-          <input type="button" id="choose" value="Choose!">
-          </form>
-          <div id="list">
-            <ul>
-            <!-- List filtered Pokemon names here-->
-          </ul>
-          </div>
+        <input type="button" id="choose" value="Choose!">
+      </form>
+      <div id="list">
+        <ul>
+          <!-- List filtered Pokemon names here-->
+        </ul>
       </div>
+    </div>
 
-      <section class="displayed r-float">
-        <div id="pokedex">
-          <ul>
-            <!-- Selected Pokemon info displays here -->
-          </ul>
-        </div>
-      </section>
-    </main>
+    <section class="displayed r-float">
+      <div id="pokedex">
+        <ul>
+          <!-- Selected Pokemon info displays here -->
+        </ul>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      Follow the dev team <a href="https://twitter.com/upmdra">@upmdra</a>
-    </footer>
-  </body>
+  <footer>
+    Follow the dev team <a href="https://twitter.com/upmdra">@upmdra</a>
+  </footer>
+</body>
 
-  <script src="vendors/scripts/jquery-3.2.1.min.js"></script>
-  <script src="vendors/scripts/handlebars.js"></script>
-  <script src="scripts/mobile.js"></script>
-  <script src="scripts/pokedexView.js"></script>
-  <script src="scripts/pokemon.js"></script>
-  <script>
-    Pokemon.fetchAll();
-  </script>
+<script src="vendors/scripts/jquery-3.2.1.min.js"></script>
+<script src="vendors/scripts/handlebars.js"></script>
+<script src="scripts/mobile.js"></script>
+<script src="scripts/pokedexView.js"></script>
+<script src="scripts/pokemon.js"></script>
+<script>
+  Pokemon.fetchAll();
+</script>
+
 </html>

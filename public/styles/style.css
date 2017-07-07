@@ -58,13 +58,9 @@ li img {
   background-position: right;
 }
 
-/*li a:hover {
+li a:hover {
   text-decoration: underline;
   text-decoration-color: #87BBBF;
-}*/
-
-.focus-this {
-  border-bottom: 2px solid #87BBBF;
 }
 
 input  {
@@ -75,3 +71,4 @@ input  {
   background: #454545;
   color: #f3f3f3;
   margin-bottom: 10px;
+}

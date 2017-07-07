@@ -5,9 +5,6 @@ function Pokemon(data){
   this.name = data.name.charAt(0).toUpperCase() + data.name.slice(1);
   this.sprite = data.sprites.front_default;
 
-// Placeholder description text for Pokemon.
-  this.desc = 'Description text goes here.'
-
 // Pokemon's generation, for filtering.
   if(this.id < 152)
     this.gen = 'first-gen';
@@ -46,25 +43,25 @@ Pokemon.all = [];
 
 var loadPokedex = function(pokedex){
   Pokemon.all = pokedex.map(function(data, idx, arr) {
-  return new Pokemon(data);
+    return new Pokemon(data);
   });
 
   Pokemon.all.sort(function(poke1, poke2) {
     return poke1.id - poke2.id;
-  })
+  });
 
   pokedexView.initIndexPage();
-}
+};
 
 Pokemon.prototype.listToHtml = function() {
   let template = Handlebars.compile($('#list-template').text());
   return template(this);
-}
+};
 
 Pokemon.prototype.pokemonToHtml = function() {
   let template = Handlebars.compile($('#pokemon-template').text());
   return template(this);
-}
+};
 
 Pokemon.fetchAll = function() {
   if(localStorage.rawData) {
@@ -82,12 +79,12 @@ Pokemon.fetchAll = function() {
           .then(function(data){
             console.log('id: ', data.id, ' name: ', data.name);
             pokedex.push(data);
-          })
-          };
-        },
+          });
+        }
+      },
       error: function(err) {
         console.error('err: ', err);
       }
     });
   }
-}
+};

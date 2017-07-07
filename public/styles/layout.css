@@ -15,25 +15,6 @@ header ul li img {
   margin-top: 0px;
 }
 
-/*footer {
-  height: 70px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #191919;
-  opacity: .95;
-}
-
-footer p {
-  width: 750px;
-  text-align: center;
-  margin: 30px auto;
-}
-
-footer p a {
-  color: #87BBBF;
-}*/
-
 footer p {
   display: none;
 }

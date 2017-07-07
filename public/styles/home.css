@@ -1,42 +1,8 @@
-* {
-  font-family: 'Montserrat', sans-serif;
-}
-
-body {
-  color: #F0F0F0;
-  background-color: #292929;
-}
-
-
-main h2 {
-  color: #E5C200;
-}
-
-.o {
-  display: inline;
-  color: #FF2929;
-}
-
-header {
-font-family: 'Montserrat', sans-serif;
-background-color: #191919;
-height: 55px;
-}
-
-#home, #pokedex, #builder {
-  margin-top: 10px;
-}
-
-footer {
-font-family: 'Montserrat', sans-serif;
-background-color: #191919;
-}
-
-h2 {
+```h2 {
   width: 750px;
   font-size: 48px;
   text-align: center;
-  color: #F0F0F0;
+  color: #f3f3f3;
   text-shadow: 2px 2px 4px #000;
   margin: auto;
   margin-top: 150px;
@@ -51,21 +17,24 @@ p {
 button {
   margin-top: 50px;
   font-size: 20px;
-  color: #F0F0F0;
-  background-color: #292929;
-  border: solid 2px #454545;
+  color: #f3f3f3;
   border-radius: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 3px;
+  background: #046699;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 .button-center {
   text-align: center;
 }
 
-/*
-white: #F0F0F0
-light-gray: #454545
-gray: #292929
-dark-gray: #191919
-red: #FF2929
-yellow: #E5C200
-*/
+#login {
+  background: #F2DF63;
+  color: #000;
+}```

@@ -1,11 +1,10 @@
 /*Site Styles*/
-* {
-  font-family: 'Montserrat', sans-serif;
-}
-
 html {
-  background-color: #292929;
-  color: #f0f0f0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #8C8371;
+  color: #f3f3f3;
+  background: url("../vendors/images/pokemon/home.jpg");
+  overflow: none;
 }
 
 /*Nav Styles*/
@@ -46,29 +45,30 @@ li img {
 }
 
 .dex-entry {
-  margin: 0 auto;
-  border: solid 3px #f3f3f3;
+  border: solid 3px #191919;
   border-radius: 10px;
   padding: 10px;
-  background: #717171;
   margin: 10px 0px;
+  margin-top: -40px;
+  margin-right: -250px;
 }
 
-.type .second-type{
-  margin: 0;
-  display: block;
-  width: auto;
+.dex-entry {
+  background: url("../vendors/images/pokemon/home.jpg");
+  background-position: right;
 }
 
-/*h3 {
-  padding-top: 10px;
-}*/
+li a:hover {
+  text-decoration: underline;
+  text-decoration-color: #87BBBF;
+}
 
-/*
-white: #F0F0F0
-light-gray: #454545
-gray: #292929
-dark-gray: #191919
-red: #FF2929
-yellow: #E5C200
-*/
+input  {
+  width: 100px;
+  height: 35px;
+  border: solid 3px #f3f3f3;
+  border-radius: 5px;
+  background: #454545;
+  color: #f3f3f3;
+  margin-bottom: 10px;
+}

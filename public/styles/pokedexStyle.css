@@ -1,7 +1,3 @@
-* {
-  font-family: 'Montserrat', sans-serif;
-}
-
 /*Floats*/
 .l-float {
   float: left
@@ -17,29 +13,33 @@
 
 /*Search Section Styles*/
 .search {
-  position: fixed;
-  height: 4000px;
+  float: left;
+  height: 950px;
   width: 32%;
-  background-color: #454545;
-  box-shadow: 2px 0px 4px #454545;
+  background-color: #191919;
+  box-shadow: 2px 0px 4px #191919;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-top: -150px;
+  opacity: .8;
 }
 
 .sprite {
-    height: 200px;
-    width: 200px;
-    border: solid 3px #f3f3f3;
-    border-radius: 40px;
-    padding: 15px;
-    background: #454545;
-  };
+  height: 200px;
+  width: 200px;
+  border: solid 3px #191919;
+  border-radius: 7px;
+  padding: 15px;
+  padding-left: 75px;
+  padding-right: 80px;
+  background: #454545;
+}
 
+.info {
+  display: none;
+}
 
-/*Displayed Section Styles*/
-/*
-white: #F0F0F0
-light-gray: #454545
-gray: #292929
-dark-gray: #191919
-red: #FF2929
-yellow: #E5C200
-*/
+.poke-name {
+  margin-top: 10px;
+  font-size: 38px;
+}

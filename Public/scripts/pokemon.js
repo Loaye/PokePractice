@@ -56,27 +56,17 @@ Pokemon.fetchAll = function() {
     pokedexView.initIndexPage();
   } else {
     $.ajax({
-<<<<<<< HEAD
-      url: 'https://pokeapi.co/api/v2/pokemon/',
-=======
       url: pokeUrl + 'pokemon/?limit=20',
->>>>>>> 843d65173ac0525c680e8afef3991243693f2f86
       type: 'GET',
       success: function(data) {
         for(var idx in data.results) {
           $.getJSON(data.results[idx].url)
           .then(function(data){
-            console.log('id: ', data.id, ' name: ', data.name);
+            console.log('data: ', data);
             pokedex.push(data);
-<<<<<<< HEAD
-          })
-          };
-        },
-=======
           });
         }
       },
->>>>>>> 843d65173ac0525c680e8afef3991243693f2f86
       error: function(err) {
         console.err('err: ', err);
       }

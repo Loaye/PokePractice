@@ -61,13 +61,8 @@ pokedexView.initIndexPage = function() {
 }
 
 $(document).ready(function () {
-<<<<<<< HEAD
-  console.log('document ready');;
-  pokedexView.handleBtn();
-=======
   console.log('document ready');
   pokedexView.handleGenFilter();
   pokedexView.handleTypeFilter();
->>>>>>> 843d65173ac0525c680e8afef3991243693f2f86
   pokedexView.handleClick();
 })

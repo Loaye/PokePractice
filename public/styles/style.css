@@ -1,16 +1,10 @@
 /*Site Styles*/
-<<<<<<< HEAD:Public/styles/style.css
-* {
-  font-family: 'Montserrat', sans-serif;
-}
-
 html {
-  background-color: #292929;
-  color: #f0f0f0;
-body {
-  background-color: #00181D;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #8C8371;
   color: #f3f3f3;
->>>>>>> 892526dc9e6d7bd2583d554ea12dbccf7023134d:public/styles/style.css
+  background: url("../vendors/images/pokemon/home.jpg");
+  overflow: none;
 }
 
 /*Nav Styles*/
@@ -36,10 +30,8 @@ li img {
 }
 
 .sprite {
-<<<<<<< HEAD:Public/styles/style.css
   display: block;
   margin: 0 auto;
-  padding-top: 100px;
   padding-left: none;
 }
 
@@ -52,16 +44,31 @@ li img {
   padding-left: 113px;
 }
 
-/*
-white: #F0F0F0
-light-gray: #454545
-gray: #292929
-dark-gray: #191919
-red: #FF2929
-yellow: #E5C200
-*/
-=======
-  width: 200px;
-  height: 200px;
+.dex-entry {
+  border: solid 3px #191919;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0px;
+  margin-top: -40px;
+  margin-right: -250px;
 }
->>>>>>> 892526dc9e6d7bd2583d554ea12dbccf7023134d:public/styles/style.css
+
+.dex-entry {
+  background: url("../vendors/images/pokemon/home.jpg");
+  background-position: right;
+}
+
+li a:hover {
+  text-decoration: underline;
+  text-decoration-color: #87BBBF;
+}
+
+input  {
+  width: 100px;
+  height: 35px;
+  border: solid 3px #f3f3f3;
+  border-radius: 5px;
+  background: #454545;
+  color: #f3f3f3;
+  margin-bottom: 10px;
+}

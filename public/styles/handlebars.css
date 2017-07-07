@@ -1,0 +1,75 @@
+#gen-filter, #type-filter {
+  width: 175px;
+  height: 35px;
+  border: solid 3px #f3f3f3;
+  border-radius: 25px;
+  padding: 15px;
+  background: #454545;
+  color: #f3f3f3;
+}
+
+#list {
+  height: 835px;
+  overflow: scroll;
+}
+
+#list li {
+  display: block;
+  cursor: pointer;
+}
+
+#pokedex p img src {
+  width: 125px;
+}
+
+.displayed {
+  margin: 150px;
+  margin-right: 425px;
+}
+
+li p img {
+  width: 150px;
+  height: 35px;
+  margin: 10px;
+}
+
+.list-name {
+  border: solid 3px #f3f3f3;
+  border-radius: 40px;
+  padding: 10px;
+  background: #454545;
+  margin: 10px 0px;
+}
+
+.list-name:hover {
+  background: #f3f3f3;
+  color: #000;
+}
+
+.style-name {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+
+.info, .base-stats, .normal-stats, .special-stats {
+  border: solid 3px #191919;
+  border-radius: 10px;
+  padding: 10px;
+  background: #454545;
+  margin: 10px 0px;
+}
+
+.id {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 270px;
+}
+
+.type-one {
+  margin-right: -15px;
+}
+
+.type-two {
+  margin-left: -15px;
+}

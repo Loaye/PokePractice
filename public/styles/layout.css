@@ -3,7 +3,7 @@ header {
   top: 0;
   width: 100%;
   background-color: #191919;
-  opacity: .8;
+  opacity: .95;
 }
 
 header ul li {
@@ -15,13 +15,13 @@ header ul li img {
   margin-top: 0px;
 }
 
-footer {
+/*footer {
   height: 70px;
   position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #191919;
-  opacity: .8;
+  opacity: .95;
 }
 
 footer p {
@@ -32,4 +32,8 @@ footer p {
 
 footer p a {
   color: #87BBBF;
+}*/
+
+footer p {
+  display: none;
 }

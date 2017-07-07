@@ -16,11 +16,12 @@
   float: left;
   height: 950px;
   width: 32%;
-  background-color: #454545;
-  box-shadow: 2px 0px 4px #454545;
+  background-color: #191919;
+  box-shadow: 2px 0px 4px #191919;
   padding: 15px;
   box-sizing: border-box;
   margin-top: -150px;
+  opacity: .8;
 }
 
 .sprite {

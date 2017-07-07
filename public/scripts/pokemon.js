@@ -73,22 +73,18 @@ Pokemon.fetchAll = function() {
     loadPokedex(pokedex);
   } else {
     $.ajax({
-      url: 'https://pokeapi.co/api/v2/pokemon/?offset=140&?limit=20',
+      url: 'https://pokeapi.co/api/v2/pokemon/',
       type: 'GET',
       datatype: 'jsonp',
       success: function(data) {
         for(var i in data.results) {
           $.getJSON(data.results[i].url)
           .then(function(data){
-            console.log('data: ', data);
+            console.log('id: ', data.id, ' name: ', data.name);
             pokedex.push(data);
-            if(pokedex.length === 20){
-               localStorage.rawData = JSON.stringify(pokedex);
-               loadPokedex(pokedex);
-             }
-          });
-        }
-      },
+          })
+          };
+        },
       error: function(err) {
         console.error('err: ', err);
       }

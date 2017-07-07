@@ -1,20 +1,35 @@
 header {
-  height: 50px;
+  height: 70px;
   top: 0;
   width: 100%;
   background-color: #191919;
   opacity: .8;
 }
 
-body {
+header ul li {
+  margin-top: 20px;
+}
 
+header ul li img {
+  float: left;
+  margin-top: 0px;
 }
 
 footer {
-  height: 50px;
+  height: 70px;
   position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #191919;
   opacity: .8;
+}
+
+footer p {
+  width: 750px;
+  text-align: center;
+  margin: 30px auto;
+}
+
+footer p a {
+  color: #87BBBF;
 }

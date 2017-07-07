@@ -23,3 +23,13 @@ footer {
   background-color: #191919;
   opacity: .8;
 }
+
+footer p {
+  width: 750px;
+  text-align: center;
+  margin: 30px auto;
+}
+
+footer p a {
+  color: #046699;
+}
